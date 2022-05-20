@@ -1,0 +1,100 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 7 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: models/samples/cookbook/regression/automobile_data.py
+--------------------------------------------------------------------------------
+models/samples/cookbook/regression/automobile_data.py:125:15: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'models/samples/cookbook/regression/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/automobile_data.py'
+ outputting to 'regression_v2/automobile_data.py'
+--------------------------------------------------------------------------------
+
+125:15: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/custom_regression.py'
+ outputting to 'regression_v2/custom_regression.py'
+--------------------------------------------------------------------------------
+
+38:8: INFO: Renamed 'tf.feature_column.input_layer' to 'tf.compat.v1.feature_column.input_layer'
+43:10: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+46:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+57:17: INFO: tf.losses.mean_squared_error requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+57:17: INFO: Renamed 'tf.losses.mean_squared_error' to 'tf.compat.v1.losses.mean_squared_error'
+61:15: INFO: Added keywords to args of function 'tf.shape'
+62:15: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+65:40: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+68:39: INFO: Renamed 'tf.train.get_global_step' to 'tf.compat.v1.train.get_global_step'
+83:9: INFO: tf.metrics.root_mean_squared_error requires manual check. tf.metrics have been replaced with object oriented versions in TF 2.0 and after. The metric function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+83:9: INFO: Renamed 'tf.metrics.root_mean_squared_error' to 'tf.compat.v1.metrics.root_mean_squared_error'
+142:23: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+162:2: INFO: Renamed 'tf.logging.set_verbosity' to 'tf.compat.v1.logging.set_verbosity'
+162:27: INFO: Renamed 'tf.logging.INFO' to 'tf.compat.v1.logging.INFO'
+163:2: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/dnn_regression.py'
+ outputting to 'regression_v2/dnn_regression.py'
+--------------------------------------------------------------------------------
+
+72:10: INFO: tf.estimator.DNNRegressor: Default value of loss_reduction has been changed to SUM_OVER_BATCH_SIZE; inserting old default value tf.keras.losses.Reduction.SUM.
+
+96:2: INFO: Renamed 'tf.logging.set_verbosity' to 'tf.compat.v1.logging.set_verbosity'
+96:27: INFO: Renamed 'tf.logging.INFO' to 'tf.compat.v1.logging.INFO'
+97:2: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/linear_regression.py'
+ outputting to 'regression_v2/linear_regression.py'
+--------------------------------------------------------------------------------
+
+58:10: INFO: tf.estimator.LinearRegressor: Default value of loss_reduction has been changed to SUM_OVER_BATCH_SIZE; inserting old default value tf.keras.losses.Reduction.SUM.
+
+101:2: INFO: Renamed 'tf.logging.set_verbosity' to 'tf.compat.v1.logging.set_verbosity'
+101:27: INFO: Renamed 'tf.logging.INFO' to 'tf.compat.v1.logging.INFO'
+102:2: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/linear_regression_categorical.py'
+ outputting to 'regression_v2/linear_regression_categorical.py'
+--------------------------------------------------------------------------------
+
+82:10: INFO: tf.estimator.LinearRegressor: Default value of loss_reduction has been changed to SUM_OVER_BATCH_SIZE; inserting old default value tf.keras.losses.Reduction.SUM.
+
+105:2: INFO: Renamed 'tf.logging.set_verbosity' to 'tf.compat.v1.logging.set_verbosity'
+105:27: INFO: Renamed 'tf.logging.INFO' to 'tf.compat.v1.logging.INFO'
+106:2: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/regression_test.py'
+ outputting to 'regression_v2/regression_test.py'
+--------------------------------------------------------------------------------
+
+40:7: INFO: Renamed 'tf.test.mock' to 'tf.compat.v1.test.mock'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'models/samples/cookbook/regression/__init__.py'
+ outputting to 'regression_v2/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
